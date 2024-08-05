@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GROCIES - HOME</title>
+    <link rel="icon" href="logo.jpg">
+    <link rel="stylesheet" href="Css.css">
+    <script src="https://kit.fontawesome.com/f348914ef2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+        <div class="logo">
+            <span>GROCIES SUPERMARKET</span>
+        </div>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Dairypage.html">Dairy Products</a></li>
+                <li><a href="Vegetables.html">Vegetables & Fruits Page</a></li>
+                <li><a href="SkincarePage.html">Cosmetics and Skin care products</a></li>
+                <li><a href="Checkout.html">Order</a></li>
+                <li><a href="Loyaltypage.html">Loyalty registration</a></li>
+                <li><a href="order.html">Order</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+            <a href="Checkout.html">
+            <i class="fa-solid fa-cart-shopping fa-2x"></i>
+            </a>
+            <a href="Loyaltypage.html">
+            <i class="fa-regular fa-user fa-2x"></i>
+            </a>
+        </div>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+    <br><br><br><br><br>
+    <div id="product-dropdowns">
+        <!-- Dropdown boxes will be added here -->
+        <script src="dropdown.js"></script>
+    </div>
+    <main>
+        <br><br><br><br><br><br>  
+        <section class="cartpage">
+            <div class="cart_body">
+                <div class="cart">
+                    <div class="cart-header">
+                        <h1>Your Shopping Cart</h1>
+                    </div>
+                    <!-- Cart Table -->
+                    <table id="cart-table">
+                        <thead>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Total</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Rows will be dynamically added here -->
+                        </tbody>
+                    </table>
+                    <div id="cart-total">Total: Rs 0.00</div>
+                    <button id="save-favorite-btn">Add to Favourites</button>
+                    <button id="apply-favorite-btn">Apply Favourites</button>
+                    <button id="clear-cart-btn" class="add-to-cart">Clear Cart</button>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>GROCIES SUPERMARKET</h2>
+                <p>Your one-stop shop for fresh groceries, natural cosmetics, and more. Dedicated to providing the best quality products with exceptional customer service.</p>
+                <div class="socials">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Dairypage.html">Dairy Products</a></li>
+                    <li><a href="Vegetables.html">Vegetables</a></li>
+                    <li><a href="SkincarePage.html">Cosmetics and Skin care products</a></li>
+                    <li><a href="Checkout.html">Order</a></li>
+                    <li><a href="Loyaltypage.html">Loyalty registration</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h2>Contact Us</h2>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 ,Main Street, Panadura</li>
+                    <li><i class="fas fa-phone"></i> 0725225063</li>
+                    <li><i class="fas fa-envelope"></i> dulainmu@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 GROCIES. All rights reserved.
+        </div>
+    </footer>
+
+
+ 
+ <script src="Orderpg.js"></script>
+</body>
+</html>
