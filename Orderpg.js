@@ -13,11 +13,11 @@ function loadCart() {
 
       const row = document.createElement('tr');
       row.innerHTML = `
-          <td>${product.name}</td>
-          <td><input type="number" value="${product.quantity}" min="1" class="quantity-input" data-index="${index}"></td>
-          <td>Rs ${product.price}</td>
-          <td class="item-total">Rs ${totalPrice.toFixed(2)}</td>
-          <td><button class="remove-btn" data-index="${index}">Remove</button></td>
+          <td scope="row" data-label="Product Name">${product.name}</td>
+          <td data-label="Quantity"><input type="number" value="${product.quantity}" min="1" class="quantity-input" data-index="${index}"></td>
+          <td data-label="Price">Rs ${product.price}</td>
+          <td data-label="Total" class="item-total">Rs ${totalPrice.toFixed(2)}</td>
+          <td data-label="Actions"><button class="remove-btn" data-index="${index}">Remove</button></td>
       `;
       cartTableBody.appendChild(row);
   });

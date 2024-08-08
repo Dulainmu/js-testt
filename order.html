@@ -9,31 +9,36 @@
     <script src="https://kit.fontawesome.com/f348914ef2.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<header>
-        <div class="logo">
-            <span>GROCIES SUPERMARKET</span>
-        </div>
+    <header>
+        <a href="#" class="logo">GROCIES<br> SUPERMARKET</a>
         <nav>
-            <ul class="navbar">
+            <ul class="navbar" id="navbar">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="About.html">About</a></li>
-                <li><a href="Dairypage.html">Dairy Products</a></li>
-                <li><a href="Vegetables.html">Vegetables & Fruits Page</a></li>
-                <li><a href="SkincarePage.html">Cosmetics and Skin care products</a></li>
-                <li><a href="Checkout.html">Order</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Products</a>
+                    <div class="dropdown-content">
+                        <a href="Dairypage.html">Dairy Products</a>
+                        <a href="Vegetables.html">Vegetables & Fruits Page</a>
+                        <a href="Fruitspage.html">Fruits Page</a>
+                        <a href="Meatpage.html">Meat Page</a>
+                        <a href="baking page.html">Bakery Items</a>
+                    </div>
+                </li>
+                <li><a href="Checkout.html">Checkout Page</a></li>
                 <li><a href="Loyaltypage.html">Loyalty registration</a></li>
-                <li><a href="order.html">Order</a></li>
+                <li><a href="order.html">Order Page</a></li>
             </ul>
         </nav>
         <div class="icons">
             <a href="Checkout.html">
-            <i class="fa-solid fa-cart-shopping fa-2x"></i>
+                <i class="fa-solid fa-cart-shopping fa-2x"></i>
             </a>
             <a href="Loyaltypage.html">
-            <i class="fa-regular fa-user fa-2x"></i>
+                <i class="fa-regular fa-user fa-2x"></i>
             </a>
         </div>
-        <div class="hamburger">
+        <div class="hamburger" id="hamburger">
             <i class="fas fa-bars"></i>
         </div>
     </header>
@@ -54,11 +59,11 @@
                     <table id="cart-table">
                         <thead>
                             <tr>
-                                <th>Product Name</th>
-                                <th>Quantity</th>
-                                <th>Price</th>
-                                <th>Total</th>
-                                <th>Actions</th>
+                                <th scope="col">Product Name</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Total</th>
+                                <th scope="col">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -66,10 +71,12 @@
                         </tbody>
                     </table>
                     <div id="cart-total">Total: Rs 0.00</div>
-                    <button id="save-favorite-btn">Add to Favourites</button>
-                    <button id="apply-favorite-btn">Apply Favourites</button>
-                    <button id="clear-cart-btn" class="add-to-cart">Clear Cart</button>
-                    
+                    <div class="cart-buttons">
+                        <button id="save-favorite-btn" class="add-to-cart">Add to Favourites</button>
+                        <button id="apply-favorite-btn" class="add-to-cart">Apply Favourites</button>
+                        <button id="clear-cart-btn" class="add-to-cart">Clear Cart</button>
+                        <button id="Checkout" class="Checkout">Goto Checkout</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -115,5 +122,6 @@
 
  
  <script src="Orderpg.js"></script>
+ <script src="nav.js"></script>
 </body>
 </html>

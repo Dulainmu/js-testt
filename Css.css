@@ -14,120 +14,146 @@ body {
 
 /*navbar*/
 
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 10%;
-    padding: 20px 100px;
-    background: seagreen;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-}
+        /*navbar*/
 
-.logo {
-    font-size: 30px;
-    color: white;
-    text-decoration: none;
-    font-weight: 700;
-}
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 20px;
+            background: seagreen;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
 
-a {
-    color: inherit;
-    text-decoration: none; 
-}
+        .logo {
+            font-size: 30px;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+        }
 
-.navbar a {
-    position: relative;
-    font-size: 18px;
-    color: #fff;
-    font-weight: 500;
-    text-decoration: none;
-    margin-left: 10px;
-}
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
 
-.navbar a::before {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #fff;
-    transition: 1s;
-}
+        .navbar {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
 
-.navbar a:hover::before {
-    width: 100%;
-}
+        .navbar li {
+            position: relative;
+        }
 
-.navbar {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+        .navbar a {
+            position: relative;
+            font-size: 18px;
+            color: #fff;
+            font-weight: 500;
+            text-decoration: none;
+            margin-left: 10px;
+            display: inline-block;
+            padding: 10px 15px;
+        }
 
+        .navbar a::before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #fff;
+            transition: 1s;
+        }
 
-.navbar li a {
-    text-decoration: none;
-    color:white;
-    font-size: 1rem;
-}
+        .navbar a:hover::before {
+            width: 100%;
+        }
 
-.icons i {
-    margin-left: 20px;
-}
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
 
-.hamburger {
-    display: none;
-    cursor: pointer;
-}
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
 
-.hamburger i {
-    font-size: 1.5rem;
-}
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
 
-/* Media Queries for Mobile */
-@media (max-width: 768px) {
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
 
-    header{padding: 0 20px;
-        justify-content: flex-end;
-        height: 10%;
-    }
+        .icons i {
+            margin-left: 20px;
+            color: white;
+        }
 
-    .icons i {
-        margin-right: 20px;
-        margin-left: 5px;
-    }
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
 
-    .navbar {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color:seagreen;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        padding: 10px 0;
-    }
+        .hamburger i {
+            font-size: 1.5rem;
+            color: white;
+        }
 
-    .navbar.active {
-        display: flex;
-    }
+        /* Media Queries for Mobile */
+        @media (max-width: 768px) {
+            header {
+                padding: 0 20px;
+                justify-content: space-between;
+            }
 
-    .navbar li {
-        margin: 10px 0;
-        text-align: center;
-    }
+            .icons i {
+                margin-right: 20px;
+                margin-left: 5px;
+            }
 
-    .hamburger {
-        display: block;
-    }
-}
+            .navbar {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: seagreen;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                padding: 10px 0;
+            }
+
+            .navbar.active {
+                display: flex;
+            }
+
+            .navbar li {
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            .hamburger {
+                display: block;
+            }
+        }
 
 /* Main Page */
 .banner {
@@ -504,244 +530,13 @@ footer {
     border: 1px solid;
   }
 
-/*Dairy Page*/
-
-.Dairypage{
-    text-align: center;
-}
-.Dairyproducts{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;  
-}
-.card{
-    background:white;
-    width: 250px;
-    height: 480px;
-    margin: 10px;
-    box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
-    box-sizing: border-box;
-    padding: 10px;
-    text-align: center;
-    transition: transform 0.5s, background 0.5s;
-    line-height: .5in;
-    border-radius: 15px;
-}
-
-.card:hover{
-    background:lightyellow;
-    transform: scale(1.05);
-}
-
-.img1{ 
-    height: 200px;
-    width: 100%;
-    border-radius: 5px;
-    background-size: cover;
-    border-radius: 5%;
-    background-size: cover;
-}
-
-#Product1{
-    background: url(Images/cheese.jpg);
-    background-size: cover;            
-}
-#Product2{
-    background: url(Images/egg.jpg);
-    background-size: cover;
-}
-#Product3{
-    background: url(Images/milk.jpg);
-    background-size: cover;
-}
-#Product4{
-    background: url(Images/yogurt.jpg);
-    background-size: cover;
-}
-#Product5{
-    background: url(Images/ice\ cream.png);
-    background-size: cover;
-}
-#Product6{
-    background: url(Images/butter.png);
-    background-size: cover;
-}
-#Product7{
-    background: url(Images/milkpowder.png);
-    background-size: cover
-}
-
-.button-container {
-    display: flex;
-    gap: 10px; /* Adjust the space between buttons as needed */
-}
-
-.add-to-cart-btn {
-    display: inline-block;
-    background-color: #08A045;
-    color: black;
-    padding: 5px 0px;
-    font-size: 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: transform 0.5s, background 0.5s;
-}
-
-.add-to-cart-btn:hover {
-    background-color: black;
-    color: white;
-    transform: scale(1.05);
-}
-  
-
-.price{
-    font-weight: 700;
-    color:#08A045;
-}
-
-/* Vegetables Page */
-
-.quantity-input {
-    width: 50px;
-    margin-right: 10px;
-}
-
-
-#whislist{
-    margin-top: 0px;
-}
-
-.Vegetablespage {
-    width: 100%;
-    padding: 0 8%;
-    background-color: wheat;
-}
-
-.Vegetablespage h1 {
-    text-align: center;
-    padding-top: 2.5%;
-    margin-bottom: 60px;
-    font-weight: 600;
-    position: relative;
-}
-
-.Vegetablespage h1::after {
-    content: '';
-    background: seagreen;
-    width: 100px;
-    height: 5px;
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.subvg {
-    background-color: wheat;
-    color: black;
-    padding: 50px;
-    margin-bottom: 30px;
-    transition: transform 0.5s, background 0.5s;
-    display: flex;
-    flex-direction: column; /* Change to column for mobile */
-    align-items: center; /* Center align items for better mobile layout */
-}
-
-.subvg:hover {
-    background-color: seagreen;
-    color: white;
-    padding: 50px;
-    margin-bottom: 30px;
-    transform: scale(1.05);
-}
-
-.subvg h2 {
-    color: seagreen;
-    font-size: 24px;
-    margin-bottom: 20px;
-    transition: transform 0.5s, background 0.5s;
-}
-
-.subvg:hover h2 {
-    color: wheat;
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.subvg img {
-    max-width: 100%;
-    width: 200px;
-    height: 200px;
-    margin-bottom: 20px; /* Adjusted for better spacing */
-}
-
-.subvg p {
-    font-size: 16px;
-    line-height: 1.6;
-    text-align: center; 
-}
-
-.contentvg {
-    display: flex;
-    align-items: center;
-    flex-direction: column; /* Change to column for mobile */
-}
-
-.textvg {
-    flex-grow: 1;
-    text-align: center; 
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-    .Vegetablespage {
-        padding: 0 4%;
-    }
-
-    .Vegetablespage h1 {
-        font-size: 2rem;
-    }
-
-    .subvg {
-        padding: 20px;
-    }
-
-    .subvg img {
-        width: 150px;
-        height: 150px;
-    }
-
-    .subvg p {
-        font-size: 14px;
-    }
-
-    .contentvg {
-        flex-direction: column;
-    }
-
-    .textvg {
-        text-align: center;
-    }
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    height:auto;
-    gap: 16px;
-    padding: 16px;
-}
-
 .cardvg {
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 16px;
     margin: 10px;
     width: 220px;
-    height: 390px;
+    height: 410px;
     background-color: #fff;
     text-align: center;
     transition: transform 0.5s, background 0.5s;
@@ -751,199 +546,6 @@ footer {
     background:lightyellow;
     transform: scale(1.05);
 }
-
-
-
-#Productvg1{
-    background: url(Images/Vegetables/apple.jpg);
-    background-size: cover;            
-}
-#Productvg2{
-    background: url(Images/Vegetables/banana.jpg);
-    background-size: cover;
-}
-#Productvg3{
-    background: url(Images/Vegetables/Carrot.jpg);
-    background-size: cover;
-}
-#Productvg4{
-    background: url(Images/Vegetables/cucumber.jpg);
-    background-size: cover;
-}
-#Productvg5{
-    background: url(Images/Vegetables/orange.jpg);
-    background-size: cover;
-}
-#Productvg6{
-    background: url(Images/Vegetables/Tomato.jpg);
-    background-size: cover;
-}
-#Productvg7{
-    background: url(Images/Vegetables/Potatoes.jpg);
-    background-size: cover
-}
-#Productvg8{
-    background: url(Images/Vegetables/cabbage.jpg);
-    background-size: cover
-}
-#Productvg9{
-    background: url(Images/Vegetables/mango.jpg);
-    background-size: cover
-}
-#Productvg10{
-    background: url(Images/Vegetables/Watermelon.jpg);
-    background-size: cover
-}
-#Productvg11{
-    background: url(Images/Vegetables/Grapes.jpg);
-    background-size: cover
-}
-#Productvg12{
-    background: url(Images/Vegetables/Bell-Pepper.jpg);
-    background-size: cover
-}
-/*cosmaticspage*/
-
-.cosgrid {
-    width: 100vw;
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 200px 1fr 1fr auto;
-    box-sizing: border-box;
-}
-
-
-.header {
-    grid-column: 1 / 5;
-}
-
-.mainleft {
-    grid-row: 2 / 4;
-    grid-column: 1 / 3;
-}
-
-.mainright {
-    grid-row: 2 / 4;
-    grid-column: 3 / 5;
-}
-
-.footer {
-    grid-column: 1 / 5;
-    grid-row: 4;
-}
-
-h1 {
-    margin: 0;
-    font-size: 2em;
-    text-align: center;
-    grid-column: 1 / 5;
-}
-
-.product-columns {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.product-table {
-    width: 100%;
-    border:none;
-    padding: 20px;
-}
-
-.product-table td {
-    display: flex;
-    justify-content: center;
-    border: none;
-    padding: 0;
-    vertical-align: top;
-}
-
-.product-box {
-    margin: 30px;
-    width: 400px;
-    height: 450px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 16px;
-    background-color: #fff;
-    text-align: center;
-    transition: transform 0.5s, background 0.5s;
-}
-
-.product-box:hover {
-    background-color: seagreen;
-    color: white;
-    transform: scale(1.05);
-}
-
-.product-box img {
-    width: 200px;
-    height: auto;
-    margin-bottom: 16px;
-}
-
-.product-box p {
-    margin: 8px 0;
-}
-
-.product-box .price {
-    font-size: 1.2em;
-    color: #08A045;
-    margin-bottom: 16px;
-}
-
-.order-link {
-    background-color: #28a745;
-    color: white;
-    padding: 10px 15px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.order-link:hover {
-    background-color: #218838;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .cosgrid {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto auto;
-    }
-
-    .header, .footer {
-        grid-column: 1;
-    }
-
-    .mainleft, .mainright {
-        grid-column: 1;
-        grid-row: auto;
-    }
-
-    h1 {
-        grid-column: 1;
-    }
-
-    .product-box {
-        margin: 20px;
-        padding: 12px;
-        height: 400px;
-        width: 300px;
-    }
-
-    .product-box img {
-        width: 150px;
-    }
-
-    .order-link {
-        padding: 8px 16px;
-    }
-}
-
-
-
 
 /*Loyaltypage*/
 .container {
@@ -1122,65 +724,6 @@ input[type="submit"]:hover {
     }
 }
 
-#oliveoil{
-    background: url(Images/baking/olive\ oil.jpg);
-    background-size: cover;
-}
-
-#pepperpwder{
-    background: url(Images/baking/pepper\ powder.jpg);
-    background-size: cover;
-}
-
-#salt{
-    background: url(Images/baking/salt.jpg);
-    background-size: cover;
-}
-
-#sugaricing{
-    background: url(Images/baking/sugar\ icing.jpg);
-    background-size: cover;
-}
-
-#vanila{
-    background: url(Images/baking/vanila.png);
-    background-size: cover;
-}
-
-#whippingcream{
-    background: url(Images/baking/whipping\ cream.jpg);
-    background-size: cover;
-}
-
-#beef{
-    background: url(Images/meat/beef.jpg);
-    background-size: cover;
-}
-
-#chicken{
-    background: url(Images/meat/chicken.jpg);
-    background-size: cover;
-}
-
-#meatball{
-    background: url(Images/meat/meat\ ball.jpg);
-    background-size: cover;
-}
-
-#cuttlefish{
-    background: url(Images/meat/cuttle\ fish.jpeg);
-    background-size: cover;
-}
-
-#dryfish{
-    background: url(Images/meat/dry\ fish.jpg);
-    background-size: cover;
-}
-
-#prawn{
-    background: url(Images/meat/prawn.jpg);
-    background-size: cover;
-}
 
 .daily_header {
     text-align: center;
@@ -1244,7 +787,7 @@ input[type="submit"]:hover {
 }
 
 .product-dropdown:focus {
-    border-color: #007bff;
+    border-color: seagreen;
     outline: none;
 }
 
@@ -1276,7 +819,7 @@ input[type="submit"]:hover {
 
 .add-to-cart-btn {
     padding: 8px 16px;
-    background-color: #007bff;
+    background-color: seagreen;
     color: white;
     border: none;
     border-radius: 4px;
@@ -1285,5 +828,137 @@ input[type="submit"]:hover {
 }
 
 .add-to-cart-btn:hover {
-    background-color: #0056b3;
+    background-color: seagreen;
+}
+
+
+  /* Styling for the cart table */
+  #cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+#cart-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+#cart-table th, #cart-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+#cart-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+#cart-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+#cart-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+#cart-total {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: right;
+}
+
+.quantity-input {
+    width: 50px;
+    text-align: center;
+}
+
+.remove-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.remove-btn:hover {
+    background-color: #c0392b;
+}
+
+.add-to-cart {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: #2ecc71;
+}
+
+.Checkout {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.Checkout {
+    background-color: #2ecc71;
+}
+
+.cart-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    #cart-table {
+        border: 0;
+    }
+
+    #cart-table caption {
+        font-size: 1.3em;
+    }
+
+    #cart-table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    #cart-table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+    }
+
+    #cart-table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+    }
+
+    #cart-table td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    #cart-table td:last-child {
+        border-bottom: 0;
+    }
 }
