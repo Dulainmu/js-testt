@@ -9,47 +9,39 @@
     <script src="https://kit.fontawesome.com/f348914ef2.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="cosgrid">
-        <div class="header">
-            <!DOCTYPE html>
-            <html lang="en">
-            <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>GROCIES - HOME</title>
-                <link rel="icon" href="logo.jpg">
-                <link rel="stylesheet" href="Css.css">
-                <script src="https://kit.fontawesome.com/f348914ef2.js" crossorigin="anonymous"></script>
-            </head>
-            <body>
-            <header>
-                    <div class="logo">
-                        <span>GROCIES SUPERMARKET</span>
+    <header>
+        <a href="#" class="logo">GROCIES <br> SUPERMARKET</a>
+        <nav>
+            <ul class="navbar" id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Products</a>
+                    <div class="dropdown-content">
+                        <a href="Dairypage.html">Dairy Products</a>
+                        <a href="Vegetables.html">Vegetables & Fruits Page</a>
+                        <a href="Fruitspage.html">Fruits Page</a>
+                        <a href="Meatpage.html">Meat Page</a>
+                        <a href="bakingpg.html">Bakery Items</a>
                     </div>
-                    <nav>
-                        <ul class="navbar">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="About.html">About</a></li>
-                            <li><a href="Dairypage.html">Dairy Products</a></li>
-                            <li><a href="Vegetables.html">Vegetables & Fruits Page</a></li>
-                            <li><a href="SkincarePage.html">Cosmetics and Skin care products</a></li>
-                            <li><a href="Checkout.html">Order</a></li>
-                            <li><a href="Loyaltypage.html">Loyalty registration</a></li>
-                            <li><a href="order.html">Order</a></li>
-                        </ul>
-                    </nav>
-                    <div class="icons">
-                        <a href="Checkout.html">
-                        <i class="fa-solid fa-cart-shopping fa-2x"></i>
-                        </a>
-                        <a href="Loyaltypage.html">
-                        <i class="fa-regular fa-user fa-2x"></i>
-                        </a>
-                    </div>
-                    <div class="hamburger">
-                        <i class="fas fa-bars"></i>
-                    </div>
-                </header>
+                </li>
+                <li><a href="Checkout.html">Checkout Page</a></li>
+                <li><a href="Loyaltypage.html">Loyalty registration</a></li>
+                <li><a href="order.html">Order Page</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+            <a href="Checkout.html">
+                <i class="fa-solid fa-cart-shopping fa-2x"></i>
+            </a>
+            <a href="Loyaltypage.html">
+                <i class="fa-regular fa-user fa-2x"></i>
+            </a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
             <br><br><br><br><br><br><br>
             <h1>Cosmetics and Skin Care Products</h1>
         </div>
@@ -165,6 +157,7 @@
         </div>
     </footer>
       <script src="script.js"></script>
+      <script src="nav.js"></script>
         </div>
     </div>
 </body>
